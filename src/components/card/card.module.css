@@ -1,0 +1,122 @@
+article {
+  max-inline-size: 25rem;
+}
+
+.card-top {
+  position: relative;
+  margin-block-end: 3.8rem;
+}
+
+.card-top > img {
+  border-radius: 0.8rem;
+}
+
+.add-to-cart-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  inline-size: 60%;
+  block-size: 4.4rem;
+  border: 1px solid var(--red);
+  border-radius: 999px;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  cursor: pointer;
+}
+
+.add-to-cart-button img {
+  inline-size: 2rem;
+}
+
+.add-to-cart-button span {
+  color: var(--rose-900);
+  font-weight: var(--wt-semi-bold);
+  font-size: 1.4rem;
+  transition: all 0.1s;
+}
+
+.add-to-cart-button:hover span {
+  color: var(--red);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.category {
+  color: var(--rose-500);
+  font-weight: var(--wt-regular);
+  font-size: 1.4rem;
+}
+.title {
+  color: var(--rose-900);
+  font-weight: var(--wt-semi-bold);
+  font-size: 1.6rem;
+}
+.price {
+  color: var(--red);
+  font-weight: var(--wt-semi-bold);
+  font-size: 1.6rem;
+}
+
+.counter-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  inline-size: 60%;
+  block-size: 4.4rem;
+  border: 1px solid var(--red);
+  border-radius: 999px;
+
+  background-color: var(--red);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.counter-container p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: var(--wt-semi-bold);
+}
+
+.counter-container button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  inline-size: 2rem;
+  block-size: 2rem;
+  border: 1px solid white;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.counter-container button:hover {
+  background-color: white;
+}
+
+.counter-container button svg path {
+  transition: all 0.2s;
+}
+
+.counter-container button:hover svg path {
+  fill: var(--red);
+}
