@@ -60,3 +60,10 @@ body {
   gap: 2rem;
   align-items: start;
 }
+
+@media screen and (max-width: 950px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+}

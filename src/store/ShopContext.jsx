@@ -8,6 +8,7 @@ export const ShopContext = createContext({
 
 export default function ShopContextProvidor({ children }) {
   const [cart, setCart] = useState([]);
+  // const [isAdded, setIsAdded] = useState(false);
 
   function handleAddToCart(name, price, category, image) {
     setCart((prevCart) => {
@@ -19,12 +20,12 @@ export default function ShopContextProvidor({ children }) {
           price: price,
           image: image,
           count: 1,
+          isAdded: true,
         },
       ];
     });
   }
 
-  // How to increase the counter for an object
   function handleCountIncrement(nameArg) {
     setCart((prevCart) => {
       let itemObj = prevCart.find((item) => {
@@ -71,6 +72,10 @@ export default function ShopContextProvidor({ children }) {
     });
   }
 
+  function handleReset() {
+    setCart([]);
+  }
+
   const ctxValue = {
     cart: cart,
     setCart: setCart,
@@ -78,6 +83,7 @@ export default function ShopContextProvidor({ children }) {
     increment: handleCountIncrement,
     decrement: handleCountDecrement,
     removeFromCart: handleRemoveItem,
+    reset: handleReset,
   };
 
   return (

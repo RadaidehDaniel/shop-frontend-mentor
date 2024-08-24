@@ -11,6 +11,10 @@ article {
   border-radius: 0.8rem;
 }
 
+.selected {
+  outline: 1px soild var(--red);
+}
+
 .add-to-cart-button {
   position: absolute;
   bottom: 0;

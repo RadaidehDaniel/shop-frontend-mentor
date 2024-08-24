@@ -5,15 +5,8 @@ import Shop from "./components/shop/Shop";
 import ShopContextProvidor from "./store/ShopContext";
 
 function App() {
-  const modal = useRef();
-
-  function handleModal() {
-    modal.current.open();
-  }
-
   return (
     <ShopContextProvidor>
-      <Model ref={modal} />
       <Shop />
       <Cart />
     </ShopContextProvidor>

@@ -2,18 +2,19 @@
 
 import style from "./card.module.css";
 import cartImage from "../../assets/images/icon-add-to-cart.svg";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ShopContext } from "../../store/ShopContext.jsx";
 
 export default function Card({ name, category, price, image }) {
   const cartCtx = useContext(ShopContext);
-  const [isAdded, setIsAdded] = useState(false);
 
+  let isSomething = false;
   let counter;
 
   cartCtx.cart.map((item) => {
     if (item.name === name) {
       counter = item.count;
+      isSomething = item.isAdded;
     }
   });
 
@@ -22,7 +23,6 @@ export default function Card({ name, category, price, image }) {
       className={style["add-to-cart-button"]}
       onClick={() => {
         cartCtx.addToCart(name, price, category, image.thumbnail);
-        setIsAdded(true);
       }}
     >
       <img src={cartImage} alt="" />
@@ -64,8 +64,12 @@ export default function Card({ name, category, price, image }) {
   return (
     <article>
       <div className={style["card-top"]}>
-        <img src={image.desktop} alt={name} />
-        {isAdded ? counterSection : addToCartBtn}
+        <img
+          src={image.desktop}
+          alt={name}
+          srcSet={`${image.mobile} 599w, ${image.tablet} 950w,${image.desktop} 1440w`}
+        />
+        {isSomething ? counterSection : addToCartBtn}
       </div>
 
       <div className={style["card-bottom"]}>

@@ -2,6 +2,7 @@ aside {
   background-color: white;
   border-radius: 1.2rem;
   padding: 2.4rem;
+  inline-size: 90%;
 }
 
 .cart-count {
