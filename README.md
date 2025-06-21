@@ -1,5 +1,14 @@
 # Shop (Frontend Mentor)
 
+## Description:
+
+## Technolgy:
+<ul>
+  <li>HTML/CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+</ul>
+
 ## Features:
 <ul>
   <li>Add items to cart</li>
